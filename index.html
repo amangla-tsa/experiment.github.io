@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lighthouse Local</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: radial-gradient(circle at top, #0f2027, #000814);
+      color: blue;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ffffff, #cfd9df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 4s ease-in-out infinite;
+    }
+
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #ffffff, transparent);
+      margin: 2rem auto;
+      animation: expand 2.5s ease forwards;
+    }
+
+    p {
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      opacity: 0.8;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Lighthouse beam effect */
+    .beam {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.08), transparent);
+      border-radius: 50%;
+      animation: rotate 12s linear infinite;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px rgba(255,255,255,0.2); }
+      50% { text-shadow: 0 0 30px rgba(255,255,255,0.5); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    @keyframes expand {
+      from { width: 0; }
+      to { width: 120px; }
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="beam"></div>
+
+  <div class="container">
+    <h1>Lighthouse Local</h1>
+    <div class="divider"></div>
+    <p>IN THE PROCESS OF BUILDING</p>
+  </div>
+
+</body>
+</html>
